@@ -1,0 +1,47 @@
+\section{Machine learning Methods}
+This section describes the classification methods used in this study. Each represents a different approach within supervised learning.
+
+\subsubsection{Random Forest}
+Random Forest is an ensemble algorithm that builds multiple decision trees during training and outputs the class that is the mode of the individual trees' classes. It is robust against overfitting and usually performs well without complex tuning.
+
+\subsubsection{Decision Tree}
+A decision tree is a predictive model that represents decisions and their possible consequences. It is easy to interpret and train but can be prone to overfitting if the tree depth is not controlled.
+
+\subsubsection{Logistic Regression}
+Logistic regression is a statistical model used to predict the probability of a binary class. It is efficient for linear problems and serves as a baseline for comparison with more complex models.
+
+\subsubsection{AdaBoost}
+AdaBoost (Adaptive Boosting) combines multiple weak classifiers, such as shallow decision trees, to form a strong classifier. Each new classifier focuses more on the examples misclassified by the previous ones.
+
+\subsubsection{Naïve Bayes}
+Naïve Bayes is a probabilistic classifier based on Bayes' theorem with a strong (naïve) assumption of independence between features. It is fast, efficient, and works well on text and classification problems with many features.
+
+\subsubsection{SVM}
+Support Vector Machines (SVM) aim to find the optimal hyperplane that separates classes with the maximum margin. It is particularly effective in high-dimensional spaces and when the number of features exceeds the number of samples.
+
+\section{Deep Learning Methods}
+Deep learning is a subset of machine learning that uses artificial neural networks with many layers to automatically learn complex patterns from large amounts of data.
+
+\subsection{Artificial Neural Networks (ANN)}
+\subsubsection{Definition}
+Artificial Neural Networks are computational models inspired by the human brain, composed of layers of interconnected nodes (neurons). Each neuron receives inputs, processes them with a weight and bias, and applies an activation function to produce an output.
+
+\subsection{Convolutional Neural Networks (CNN)}
+\subsubsection{Definition}
+Convolutional Neural Networks are specialized neural networks primarily used for image processing tasks. They use convolutional layers to automatically extract spatial features from images, followed by pooling and fully connected layers for classification.
+
+\subsection{Recurrent Neural Networks (RNN)}
+\subsubsection{Definition}
+Recurrent Neural Networks are designed to recognize patterns in sequences of data by using loops in the network to maintain information across time steps. They are commonly used in natural language processing and time-series prediction.
+
+\subsection{Long Short-Term Memory (LSTM)}
+\subsubsection{Definition}
+Long Short-Term Memory networks are a type of RNN that can learn long-term dependencies using a special architecture that controls the flow of information. They are effective in handling the vanishing gradient problem during training.
+
+\subsection{Autoencoders}
+\subsubsection{Definition}
+Autoencoders are unsupervised neural networks that learn efficient codings of data. They consist of an encoder that compresses the data and a decoder that reconstructs it. They are used for tasks like dimensionality reduction and anomaly detection.
+
+\subsection{Generative Adversarial Networks (GAN)}
+\subsubsection{Definition}
+Generative Adversarial Networks consist of two neural networks—the generator and the discriminator—that compete against each other. The generator creates synthetic data, while the discriminator evaluates them, leading to the generation of highly realistic data.

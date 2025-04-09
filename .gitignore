@@ -1,0 +1,15 @@
+# Compile files
+
+main.aux
+main.bbl
+main.fdb_latexmk
+main.fls
+main.log
+main.out
+main.synctex.gz
+main.blg
+
+# Mac default files
+
+*.DS_Store
+paper/.DS_Store
