@@ -1,23 +1,17 @@
 \section{Machine learning Methods}
 This section describes the classification methods used in this study. Each represents a different approach within supervised learning.
 
-\subsubsection{Random Forest}
-Random Forest is an ensemble algorithm that builds multiple decision trees during training and outputs the class that is the mode of the individual trees' classes. It is robust against overfitting and usually performs well without complex tuning.
+\input{sections/methodologies/randomforest.tex}
 
-\subsubsection{Decision Tree}
-A decision tree is a predictive model that represents decisions and their possible consequences. It is easy to interpret and train but can be prone to overfitting if the tree depth is not controlled.
+\input{sections/methodologies/decisiontree.tex}
 
-\subsubsection{Logistic Regression}
-Logistic regression is a statistical model used to predict the probability of a binary class. It is efficient for linear problems and serves as a baseline for comparison with more complex models.
+\input{sections/methodologies/logisticregression.tex}
 
-\subsubsection{AdaBoost}
-AdaBoost (Adaptive Boosting) combines multiple weak classifiers, such as shallow decision trees, to form a strong classifier. Each new classifier focuses more on the examples misclassified by the previous ones.
+\input{sections/methodologies/adaboost.tex}
 
-\subsubsection{Naïve Bayes}
-Naïve Bayes is a probabilistic classifier based on Bayes' theorem with a strong (naïve) assumption of independence between features. It is fast, efficient, and works well on text and classification problems with many features.
+\input{sections/methodologies/naivebayes.tex}
 
-\subsubsection{SVM}
-Support Vector Machines (SVM) aim to find the optimal hyperplane that separates classes with the maximum margin. It is particularly effective in high-dimensional spaces and when the number of features exceeds the number of samples.
+\input{sections/methodologies/supportvectormachine.tex}
 
 \section{Deep Learning Methods}
 Deep learning is a subset of machine learning that uses artificial neural networks with many layers to automatically learn complex patterns from large amounts of data.
