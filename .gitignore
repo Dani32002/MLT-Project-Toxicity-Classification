@@ -13,3 +13,12 @@ main.blg
 
 *.DS_Store
 paper/.DS_Store
+
+# Output files
+data/embeddings_data.csv
+balanced_data_glove.csv
+balanced_data.csv
+glove.twitter.27B*
+embeddings_data_glove.npy
+10firstscolumns.csv
+cnn_trained_model.h5
