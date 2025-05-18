@@ -1,16 +1,13 @@
-import { Tooltip } from "react-bootstrap";
-import { BarChart, CartesianGrid, Legend, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { BarChart, Bar, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 export default function BarGraph({ data }) {
     return (
-        <ResponsiveContainer>
+        <ResponsiveContainer width={"60%"} height={300}>
             <BarChart data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="Class" />
+                <XAxis dataKey="name" />
                 <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey=
+                <Bar dataKey="Frequency" fill="#8884d8" />
             </BarChart>
         </ResponsiveContainer>
     )
