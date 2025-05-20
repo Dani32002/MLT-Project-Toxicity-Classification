@@ -1,3 +1,38 @@
+The problem of detecting toxicity and hate speech has been addressed by a variety of authors, each proposing interesting solutions. These authors have applied different methodologies, preprocessing, models, and embeddings, yielding varying results, but in general, they highlight the potential of using Machine Learning and Deep Learning to solve the problem.
+
+In [ ], Fieri and Suhartono sought to perform automatic moderation using Machine Learning and Deep Learning to combat the rapid spread of offensive language online. Building on previous research, they explored the best combination of models to build an ensemble model that used soft voting. This voting method determines the probability of each class for each estimator, in order to perform the overall estimation.
+
+Regarding the methodology, they used a dataset from Twitter and performed URL cleaning, user mentions, and scoring. Easy Data Augmentation was then used to balance the datasets using techniques such as synonym replacement, random insertion, random swapping, and random deletion. The dataset was tokenized. Subsequently, for Deep Learning, embedding was applied using GloVe, and for Machine Learning, TF-IDF and sentiment analysis with Valence Aware Dictionary and Sentiment Reasoner (VADER) were used.
+
+For Machine Learning, the models used were: Random Forest, Naive Bayes, Decision Tree, Logistic Regression, AdaBoost, and KNN. These models were trained using cross-validation, and based on the F1 score, the top 3 and 5 were selected to build models with soft voting. For Deep Learning, CNN, LSTM, Bi-LSTM, GRU, and Bi-GRU were used. These networks were trained and pooled, using one of the versions of both LSTM and GRU along with CNN.
+
+Regarding the results, Random Forest was found to be the best Machine Learning model, achieving a 92.685% F1 score, and the best pooled models were Random Forest, Decision Tree, Logistic Regression, AdaBoost, and Naive Bayes, achieving a 92.750%. In Deep Learning, Bi-LSTM obtained the best results with a 93.560% F1 score, and the best ensemble achieved 93.818%. The study concludes by mentioning that it is not ruled out that there are still interesting combinations to explore.
+
+In [ ], Bonetti et al., with a similar objective as [ ], sought to compare three methods frequently used in NLP challenges: Logistic Regression, Random Forest, and Support Vector Machine, along with topic modeling techniques (Latent Semantic Analysis (LSA) and Latent Dirichlet Allocation LDA), in addition to the Transformer architecture, for the task of toxicity detection.
+
+This research used TF-IDF and word embeddings. Two datasets were also created: one with basic cleaning and lemmatization, and another similar one without stop words and with emojis translated into words.
+For the traditional machine learning models, TF-IDF was used with Logistic Regression and Random Forest. After experimenting with these models in their basic state, LDA was applied to three topics on the data to detect relevant aspects and improve the training of the two aforementioned algorithms. Subsequently, LSA was used to reduce the dimensionality of the dataset and extract the main topics, combining it with SVM using a radial kernel.
+
+Finally, the Transformer architecture was used with BERTweet to compare Machine Learning with Deep Learning. For BERTweet, fine-tuning was performed on its final layer. A variant with a binary classification neural network on top, training the entire model, and another version training only the binary classification layers were also tested.
+
+
+In the logistic regression experiment, an F1 score of 0.9073 was achieved using the first dataset. With Random Forest, 0.9011 was obtained using the second dataset using the following hyperparameters: 100 classifiers, a maximum depth of 80, and 10 samples required to split a node. SVM + LSA achieved a score of 0.9112 using 5000 dimensions in LSA and C = 4.
+
+
+Using BERTweet, a score of 0.9140 was achieved with 4 epochs, a learning rate of $2 \times 10^{-5}$ in the Adam optimizer, and a hidden dropout probability of 0.3, in the model with fine-tuning on the header layer.
+
+Regarding LDA, the best model was logistic regression with the first dataset, achieving an F1 score of 0.9046. The research concludes that the task is difficult, given the highly variable environment. Even so, it can be said that, among the investigated models, high results were achieved, with logistic regression offering the best balance between performance and computational cost.
+
+
+Following similar objectives, Toktarova et al. in [ ] sought to contribute to the development of tools and strategies to combat hate speech on social media, in order to create a healthy environment. To this end, they investigated and compared multiple Deep Learning and Machine Learning methods in the context of hate speech on Twitter.
+
+In this research, after performing preprocessing cleaning on three datasets, TF-IDF and Word2Vec were used to perform text embedding. Decision trees, Naive Bayes, KNN, and SVM were used for machine learning exploration. LSTM, Bi-LSTM, and CNN were used for deep learning.
+The results showed that the most valuable methods were Deep Learning methods, with Bi-LSTM standing out, achieving an F1 score of 0.899 on one of the datasets used.
+
+\subsection{RoBERTa Context}
+
+roBERTa is a pre-trained bidirectional encoder based on BERT, but trained on a larger amount of data and with longer sequences. BERT, on the other hand, is based on the encoder part of the Transformers architecture, which generates vector representations taking into account both the past and future context of the steps in the sequence. The model's pre-trained knowledge can be reused for other tasks by simply adding a classification head and adjusting the pre-trained weights to solve the new problem. In [], BERTweet, a model similar to roBERTa but trained specifically on Twitter data, is used, achieving an accuracy of 92.38.
+
 \section{Machine learning Methods}
 This section describes the classification methods used in this study. Each represents a different approach within supervised learning.
 
@@ -8,6 +43,8 @@ This section describes the classification methods used in this study. Each repre
 \input{sections/methodologies/logisticregression.tex}
 
 \input{sections/methodologies/adaboost.tex}
+
+\input{sections/methodologies/xgboost.tex}
 
 \input{sections/methodologies/naivebayes.tex}
 
@@ -28,9 +65,7 @@ Convolutional Neural Networks are specialized neural networks primarily used for
 \subsubsection{Definition}
 Recurrent Neural Networks are designed to recognize patterns in sequences of data by using loops in the network to maintain information across time steps. They are commonly used in natural language processing and time-series prediction.
 
-\subsection{Long Short-Term Memory (LSTM)}
-\subsubsection{Definition}
-Long Short-Term Memory networks are a type of RNN that can learn long-term dependencies using a special architecture that controls the flow of information. They are effective in handling the vanishing gradient problem during training.
+\input{sections/methodologies/bi_lstm.tex}
 
 \subsection{Autoencoders}
 \subsubsection{Definition}
