@@ -31,7 +31,7 @@ export default function Summary({ input }) {
             // Llamadas al backend para cada palabra
             const results = await Promise.all(
                 extractedWords.map(async (word) => {
-                    const res = await fetch(`/word_stats?word=${word}`);
+                    const res = await fetch(`http://localhost:5000/word_stats?word=${word}`);
                     return await res.json();
                 })
             );
@@ -44,6 +44,13 @@ export default function Summary({ input }) {
             fetchWordStats();
         } else {
             setWords([]);
+            setWordData({
+                word: "",
+                data: [
+                    { name: 'Not Toxic', Frequency: 0 },
+                    { name: 'Toxic', Frequency: 0 },
+                ]
+            });
         }
     }, [input]);
 
