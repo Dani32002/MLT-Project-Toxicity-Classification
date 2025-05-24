@@ -25,3 +25,8 @@ cnn_trained_model.h5
 best_model.pth
 data/embeddings_data.csv
 embeddings_data_sequencial.npy
+
+# Backend files
+backend/balanced_data.csv
+backend/best_model.pth
+backend/venv/
