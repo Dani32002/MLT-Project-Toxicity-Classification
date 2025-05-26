@@ -1,11 +1,11 @@
 \subsection{RoBERTa-Twitter Results}
 
-The first step in fine-tuning RoBERTa-Twitter was to evaluate its performance without training the classification head and using the default weights, aiming to establish a baseline. Doing so yielded the classification report shown in Figure \ref{fig:confusion_matrix_bilstm} and the confusion matrix presented in Figure \ref{fig:confusion_matrix_bilstm_shapeY}.
+The first step in fine-tuning RoBERTa-Twitter was to evaluate its performance without training the classification head and using the default weights, aiming to establish a baseline. Doing so yielded the classification report shown in Figure \ref{fig:confusion_matrix_bilstm} and the confusion matrix presented in Figure \ref{fig:confusion_matrix_roberta_shapeY}.
 
 \begin{table}[H]
 \centering
 \caption{Classification Report}
-\label{tab:classification_report}
+\label{tab:classification_report_1}
 \begin{tabular}{lcccc}
 \toprule
 Class        & Precision & Recall & F1-score & Support \\
@@ -19,6 +19,14 @@ Weighted Avg & 0.27      & 0.52   & 0.35     & 7155    \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{images/confusion_matrix_bilstm_shapeY.png}
+    \caption{RoBERTa-Twitter model confusion matrix without training the classification head}
+    \label{fig:confusion_matrix_roberta_shapeY}
+\end{figure}
+
 
 As observed, the model predicts everything as toxic. This is because the classification head still retains its random weights and the RoBERTa-Twitter model has not yet been fine-tuned for this specific task.
 
