@@ -22,7 +22,7 @@ Table~\ref{tab:xgboost_classification_report} shows the classification report. I
 \end{tabular}
 \end{table}
 
-In Table~\ref{tab:xgboost_classification_report}, the model's confusion matrix can be observed. It reflects the quality of the model, showing a high concentration of true positives and true negatives. However, the accuracy is 86\%, and more than 1300 misclassified examples are observed in the test set. This implies that, in a production environment, there could be cases of toxicity that persist or non-toxicity cases that are unjustly censored.
+In Figure~\ref{fig:confusion_matrix_xgboost}, the model's confusion matrix can be observed. It reflects the quality of the model, showing a high concentration of true positives and true negatives. However, the accuracy is 86\%, and more than 1300 misclassified examples are observed in the test set. This implies that, in a production environment, there could be cases of toxicity that persist or non-toxicity cases that are unjustly censored.
 
 \begin{figure}[H]
     \centering
@@ -31,4 +31,4 @@ In Table~\ref{tab:xgboost_classification_report}, the model's confusion matrix c
     \label{fig:confusion_matrix_xgboost}
 \end{figure}
 
-The obtained accuracy of 86\% exceeds that observed
+The accuracy obtained of 86% exceeds that observed in \cite{toktarova2023hate}, although it does not exceed what was seen in \cite{bonetti2023comparison} and \cite{fieri2023offensive}.
