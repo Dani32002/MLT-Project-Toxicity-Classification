@@ -1,4 +1,4 @@
-\subsection{GRU Results}
+\subsubsection{GRU Results}
 
 \begin{table}[H]
 \centering
@@ -56,6 +56,6 @@ Weighted Avg & 0.90      & 0.90   & 0.90     & 10037   \\
 
 The GRU model trained on CLS token embeddings demonstrated strong classification performance, achieving an overall accuracy of 90\% and an F1-score of 0.89 for the hate speech class (Table~\ref{tab:gru_classification_report}). The model showed balanced performance across both classes, with precision and recall values above 0.87. The confusion matrix in Figure~\ref{fig:confusion_gru} illustrates this balance, with 4585 true negatives and 4406 true positives, though 678 hate examples were misclassified as non-hate.
 
-Despite the strong predictive performance, the training curves in Figure~\ref{fig:training_curves_gru} indicate potential overfitting. The training loss decreases consistently, but the validation loss remains high and fluctuates significantly across epochs. Similarly, the training accuracy approaches 99\% while validation accuracy stabilizes near 90\%, suggesting that the model has learned the training data very well but may not generalize perfectly to unseen data.
+Despite the strong predictive performance, the training curves in Figure~\ref{fig:accuracy_gru} and Figure~\ref{fig:loss_gru} indicate potential overfitting. The training loss decreases consistently, but the validation loss remains high and fluctuates significantly across epochs. Similarly, the training accuracy approaches 99\% while validation accuracy stabilizes near 90\%, suggesting that the model has learned the training data very well but may not generalize perfectly to unseen data.
 
 Nevertheless, the ROC curve in Figure~\ref{fig:roc_gru} shows excellent separability between classes, with an AUC close to 0.93. The Precision-Recall curve in Figure~\ref{fig:pr_gru} further supports this, with an average precision (AP) of 0.96, indicating that the model maintains high precision across a wide range of recall thresholds. These metrics confirm that the GRU model is effective at ranking and identifying hate speech with high confidence, even under class imbalance conditions.
