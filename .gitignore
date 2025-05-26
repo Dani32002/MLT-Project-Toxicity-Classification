@@ -8,6 +8,7 @@ main.log
 main.out
 main.synctex.gz
 main.blg
+*.aux
 
 # Mac default files
 
@@ -30,3 +31,5 @@ embeddings_data_sequencial.npy
 backend/balanced_data.csv
 backend/best_model.pth
 backend/venv/
+
+

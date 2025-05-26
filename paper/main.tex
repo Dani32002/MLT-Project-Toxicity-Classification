@@ -5,8 +5,12 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{geometry}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{booktabs}
 \geometry{margin=1in}
 
 \title{Comparing machine learning and deep learning models to moderate inappropriate messages on social media.}
@@ -15,6 +19,7 @@ Daniel Escalante Pérez \\
 Marilyn Stephany Joven Fonseca \\
 Eder Leandro Carbonero Baqueron \\}
 \date{\today}
+\pagestyle{plain} 
 
 \begin{document}
 
@@ -26,7 +31,14 @@ Aquí va el resumen del artículo, una breve descripción del problema, la metod
 \section{Introduction}
 \input{sections/introduction}
 
-\section{methodologies}
+\section{Related Work}
+\input{sections/related_work}
+
+\section{Theorical framework}
+\input{sections/theoretical_framework}
+
+\section{Methods}
+\label{sec:methods}
 \input{sections/methodologies}
 
 \section{Results}
