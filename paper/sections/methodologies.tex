@@ -1,41 +1,24 @@
-\section{Machine learning Methods}
-This section describes the classification methods used in this study. Each represents a different approach within supervised learning.
+\subsection{Preprocessing and Data Augmentation}
 
-\input{sections/methodologies/randomforest.tex}
+To implement the methods based on Machine learning or deep learning for hate speech detection on Twitter, a thorough data preprocessing procedure was carried out to balance the classes in the dataset. First, the two target categories were identified: \textit{hate speech} and \textit{no hate speech}, encoded as 1 and 0, respectively. Various text cleaning techniques were then applied, including the removal of special characters, URLs, mentions, Twitter-specific symbols, spelling correction, stopword removal, stemming, as well as the elimination of duplicate records and null values. Additionally, the vocabulary was enriched through synonym validation and expansion. To address the inherent class imbalance, the Easy Data Augmentation (EDA) technique was applied, which allowed for the generation of a balanced dataset, ultimately saved in a CSV file named \texttt{balanced\_data.csv}~\cite{wei2019eda}.
 
-\input{sections/methodologies/decisiontree.tex}
+The preprocessing approach adopted in this study shares several similarities with previous works such as those by Fieri et al.~\cite{fieri2023offensive} and Almeida et al.~\cite{almeida2023comparison}, particularly in terms of text data cleaning and preparation for hate speech detection tasks. As in these studies, common techniques were applied, including the removal of textual noise (mentions, URLs, symbols), lexical normalization, and dimensionality reduction through the use of stopwords and stemming. However, our approach integrates additional steps that are not consistently addressed in those works, such as automated spelling correction, semantic validation using synonyms, and the application of data augmentation techniques like Easy Data Augmentation (EDA). This last aspect represents a significant difference, as the reviewed studies often rely on direct undersampling or oversampling, whereas our methodology emphasizes the synthetic generation of new samples. This can contribute to greater dataset diversity and model robustness during training, regardless of the architecture employed~\cite{wei2019eda}.
 
-\input{sections/methodologies/logisticregression.tex}
 
-\input{sections/methodologies/adaboost.tex}
+\subsection{Machine learning Methods}
 
-\input{sections/methodologies/naivebayes.tex}
+\input{sections/methodologies/xgboots_methodology.tex}
 
-\input{sections/methodologies/supportvectormachine.tex}
+\input{sections/methodologies/logisticregression_methodology.tex}
 
-\section{Deep Learning Methods}
-Deep learning is a subset of machine learning that uses artificial neural networks with many layers to automatically learn complex patterns from large amounts of data.
+\input{sections/methodologies/svm_methodology.tex}
 
-\subsection{Artificial Neural Networks (ANN)}
-\subsubsection{Definition}
-Artificial Neural Networks are computational models inspired by the human brain, composed of layers of interconnected nodes (neurons). Each neuron receives inputs, processes them with a weight and bias, and applies an activation function to produce an output.
+\subsection{Deep Learning Methods}
 
-\subsection{Convolutional Neural Networks (CNN)}
-\subsubsection{Definition}
-Convolutional Neural Networks are specialized neural networks primarily used for image processing tasks. They use convolutional layers to automatically extract spatial features from images, followed by pooling and fully connected layers for classification.
+\input{sections/methodologies/cnn_methodology.tex}
 
-\subsection{Recurrent Neural Networks (RNN)}
-\subsubsection{Definition}
-Recurrent Neural Networks are designed to recognize patterns in sequences of data by using loops in the network to maintain information across time steps. They are commonly used in natural language processing and time-series prediction.
+\input{sections/methodologies/bi_lstm_methodology.tex}
 
-\subsection{Long Short-Term Memory (LSTM)}
-\subsubsection{Definition}
-Long Short-Term Memory networks are a type of RNN that can learn long-term dependencies using a special architecture that controls the flow of information. They are effective in handling the vanishing gradient problem during training.
+\input{sections/methodologies/mpl_methodology.tex} 
 
-\subsection{Autoencoders}
-\subsubsection{Definition}
-Autoencoders are unsupervised neural networks that learn efficient codings of data. They consist of an encoder that compresses the data and a decoder that reconstructs it. They are used for tasks like dimensionality reduction and anomaly detection.
-
-\subsection{Generative Adversarial Networks (GAN)}
-\subsubsection{Definition}
-Generative Adversarial Networks consist of two neural networks—the generator and the discriminator—that compete against each other. The generator creates synthetic data, while the discriminator evaluates them, leading to the generation of highly realistic data.
+\input{sections/methodologies/finetuning_roberta_methodology.tex}
