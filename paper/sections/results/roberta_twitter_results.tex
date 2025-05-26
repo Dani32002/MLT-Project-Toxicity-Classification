@@ -4,7 +4,7 @@ The first step in fine-tuning RoBERTa-Twitter was to evaluate its performance wi
 
 \begin{table}[H]
 \centering
-\caption{Classification Report}
+\caption{Classification Report without Training the Classification Head}
 \label{tab:classification_report_1}
 \begin{tabular}{lcccc}
 \toprule
@@ -57,7 +57,7 @@ In summary, on the validation set, the loss stabilizes around 0.3 and the accura
 
 \begin{table}[H]
 \centering
-\caption{Classification Report}
+\caption{Classification Report after Training the Classification Head}
 \label{tab:classification_report_2}
 \begin{tabular}{lcccc}
 \toprule
