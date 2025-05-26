@@ -20,32 +20,3 @@ The use of Dropout layers between convolutional blocks, with a dropout rate of 0
 Compared to previous studies such as those by Fieri et al. and Almeida et al., this CNN model opts for a lighter architecture focused on efficiency and local pattern extraction, avoiding more complex hybrid or recurrent architectures that are typically more computationally expensive.
 
 During the CNN training phase, an early stopping strategy was implemented to prevent overfitting and optimize generalization. Training was initially scheduled for 30 epochs with a batch size of 32. Validation metrics were monitored continuously, resulting in automatic termination of training after 16 epochs when no sustained improvement was observed on the validation set.
-
-At the end of training, the model achieved the following results on the training data:
-
-\begin{itemize}
-    \item Accuracy: 0.8836
-    \item Loss: 0.2719
-    \item Precision: 0.9430
-    \item Recall: 0.8191
-\end{itemize}
-
-Regarding the validation set, the recorded metrics were:
-
-\begin{itemize}
-    \item Validation Accuracy: 0.8600
-    \item Validation Loss: 0.3175
-    \item Validation Precision: 0.9325
-    \item Validation Recall: 0.7835
-\end{itemize}
-
-Finally, when evaluating the model on the actual test data, the following performance was obtained:
-
-\begin{itemize}
-    \item Accuracy: 0.8610
-    \item Precision: 0.9190
-    \item Recall: 0.7991
-    \item F1 Score: 0.8549
-\end{itemize}
-
-These results demonstrate consistency across training, validation, and testing phases, indicating that the model maintains a good balance between precision and recall. Furthermore, when compared to similar models in previous studies, such as Fieri et al. (2023), the CNN architecture exhibits competitive performance with a lower structural complexity.
