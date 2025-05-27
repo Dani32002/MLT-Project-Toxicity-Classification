@@ -1,11 +1,11 @@
 \subsubsection{SVM Results}
 After implementing the methodology described earlier, it was found that the best hyperparameter was a penalty for misclassification of 1 (C) and a Radial Basis Function (RBF) as kernel. With the previous hyperparameters, the model achieved an accuracy of 0.87. 
-Table~\ref{tab:gru_classification_report} shows the classification report. As seen, the highest metric is the Recall for Non-toxic messages. This suggests that the model is more likely to correctly identify non-toxic comments and can have some struggles to capture all true positives in the toxic class. Although the precision for the positive class is high (0.91), indicating that when the model predicts toxicity it is usually correct, the lower recall reveals that some toxic instances are being misclassified as non-toxic. The results are similar to the XGBoostClassifier, indicating that this model could also benefit with more toxic examples.
+Table~\ref{tab:svm_classification_report} shows the classification report. As seen, the highest metric is the Recall for Non-toxic messages. This suggests that the model is more likely to correctly identify non-toxic comments and can have some struggles to capture all true positives in the toxic class. Although the precision for the positive class is high (0.91), indicating that when the model predicts toxicity it is usually correct, the lower recall reveals that some toxic instances are being misclassified as non-toxic. The results are similar to the XGBoostClassifier, indicating that this model could also benefit with more toxic examples.
 
 \begin{table}[H]
     \centering
     \caption{Classification report of the SVM model}
-    \label{tab:gru_classification_report}
+    \label{tab:svm_classification_report}
     \begin{tabular}{lcccc}
         \toprule
         Class & Precision & Recall & F1-score & Support \\
